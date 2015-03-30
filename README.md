@@ -1,4 +1,4 @@
-# [HybridPlay](http://www.hybridplay.com/) [![HybridPlay](http://www.hybridplay.com/wp-content/uploads/2014/10/HybridLogo2.png)](http://www.hybridplay.com)
+# HybridPlay Center  --  [![HybridPlay](http://www.hybridplay.com/wp-content/uploads/2014/10/HybridLogo2.png)](http://www.hybridplay.com)
 
 # Play Smartphone games using the playground as a control interface
 
