@@ -10,7 +10,11 @@ public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		HybridPlayCenter mainApp = new HybridPlayCenter();
+		mainApp.setPlatformResolver(new AndroidResolver());
+		
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		initialize(new HybridPlayCenter(), config);
+		initialize(mainApp, config);
 	}
 }
