@@ -1,0 +1,17 @@
+<!-- http://schemas.android.com/apk/res/com.hybridplay.center -->
+
+<com.hybridplay.widgets.RobotoTextView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    hybrid:typeface="roboto_bold"
+    android:textSize="16sp"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:textColor="#fff"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"/>

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<!-- #AARRGGBB -->
     <color name="black_overlay">#66000000</color>
     <color name="absolute_white">#ffffffff</color>
     <color name="absolute_black">#ff000000</color>
     <color name="middle_gray">#ff787878</color>
     <color name="dark_gray">#ff292929</color>
     <color name="transparent">#00000000</color>
+    
+    <color name="hp_red">#ffff0000</color>
+    <color name="hp_green">#ffa0bf36</color>
+    <color name="hp_blue">#ff3399ff</color>
+    <color name="hp_orange">#ffff9933</color>
+    <color name="hp_yellow">#ffffcc33</color>
 
 </resources>

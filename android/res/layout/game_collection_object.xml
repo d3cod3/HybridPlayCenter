@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HP_Games$GameObjectFragment" >
+
+    <com.hybridplay.widgets.RobotoTextView
+        xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+        android:id="@+id/gameTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/game_name"
+        android:textColor="@color/hp_blue"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        hybrid:typeface="roboto_black" />
+
+    <ImageView
+        android:id="@+id/gameScreenshot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.9"
+        android:clickable="true"
+        android:contentDescription="@string/content_image"
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="20dp"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/gameFloatingInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gamedatabackground"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent" >
+
+            <com.hybridplay.widgets.RobotoTextView
+                xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+                android:id="@+id/gameName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="@string/game_name"
+                android:textColor="@color/absolute_white"
+                android:textSize="26sp"
+                hybrid:typeface="roboto_black" />
+
+            <com.hybridplay.widgets.RobotoTextView
+                xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+                android:id="@+id/gameDesc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/game_description"
+                android:textColor="@color/absolute_white"
+                android:textSize="14sp"
+                hybrid:typeface="roboto_black" />
+
+            <com.hybridplay.widgets.RobotoTextView
+                xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+                android:id="@+id/gameStore"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:text="@string/game_play_store_link"
+                android:textColor="@color/hp_blue"
+                android:textSize="16sp"
+                hybrid:typeface="roboto_black" />
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

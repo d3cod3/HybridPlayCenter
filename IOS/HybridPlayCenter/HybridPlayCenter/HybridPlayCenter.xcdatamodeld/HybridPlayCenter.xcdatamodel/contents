@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="UpdatesInfo" syncable="YES">
+        <attribute name="firstLaunch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastGamesUpdateDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastGamesUpdateMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weNeedToUpdate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" syncable="YES">
+        <attribute name="login" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UpdatesInfo" positionX="882" positionY="-738" width="128" height="103"/>
+        <element name="UserInfo" positionX="738" positionY="-738" width="128" height="103"/>
+    </elements>
+</model>

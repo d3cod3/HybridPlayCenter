@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <Button
+        android:id="@+id/btn_pair"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"        
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/text_pair" />
     
     <TextView
-        android:id="@+id/device_name"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/absolute_white"
-        android:textSize="24sp" />
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btn_pair"
+        android:layout_toLeftOf="@+id/btn_pair"
+        android:layout_toStartOf="@+id/btn_pair"
+        android:text="@string/unknown_device"
+        android:textColor="@color/dark_gray"
+        android:textSize="16sp" />
+	
     <TextView
-        android:id="@+id/device_address"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/absolute_white"
-        android:textSize="12sp" />
-
-</LinearLayout>
+        android:layout_alignBottom="@+id/btn_pair"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btn_pair"
+        android:layout_toStartOf="@+id/btn_pair"
+        android:text="@string/unknown_address"
+        android:textColor="@color/hp_yellow" />
+    
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HP_Bluetooth" >
+
+    <com.hybridplay.widgets.RobotoTextView
+        xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+        android:id="@+id/bluetooth_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:text="@string/disconnected"
+        android:textAllCaps="true"
+        android:textColor="@color/hp_red"
+        android:textSize="16sp"
+        hybrid:typeface="roboto_medium" />
+
+    <com.hybridplay.widgets.RobotoTextView
+        xmlns:hybrid="http://schemas.android.com/apk/res/com.hybridplay.center"
+        android:id="@+id/paired_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/device_paired"
+        android:textColor="@color/hp_blue"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        hybrid:typeface="roboto_medium" />
+    
+    <ListView
+        android:id="@+id/foundDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp" >
+        
+    </ListView>
+
+</RelativeLayout>

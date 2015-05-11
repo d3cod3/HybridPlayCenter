@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- MAIN APP  -->
     <string name="app_name">HybridPlay Center</string>
-    <string name="hello_world">Hello world!</string>
+    <string-array name="menu_array">
+        <item>Games</item>
+        <item>Bluetooth</item>
+        <item>Calibration</item>
+        <item>Instructions</item>
+        <item>Credits</item>
+        <item>Exit</item>
+    </string-array>
+    <string name="game_name">Game Name</string>
+    <string name="game_description">Game Description</string>
+    <string name="game_play_store_link">Game Play Store link</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="update_games">Check if new HybridPlay games are available</string>
+    <string name="close_app_message">You need an internet connection to retrieve the games list, please connect your device and restart HybridPlay Center.</string>
+    
+    <!-- NETWORK -->
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="websiteSyntaxError">Invalid website URL</string>
+    <string name="checkSetupInternet">No internet connection.</string>
+    <string name="error">Something went wrong; please check your setup and the system log</string>
+    
+    <!-- DUMMY -->
+    <string name="content_image">Image Content</string>
+    
+    <!-- GAMES -->
+    
     
     <!-- BLUETOOTH -->
     <string name="ble_not_supported">BLE is not supported</string>
@@ -15,7 +43,14 @@
     <string name="title_devices">BLE Device Scan</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
     <string name="unknown_device">Unknown device</string>
+    <string name="unknown_address">000000000</string>
     <string name="unknown_characteristic">Unknown characteristic</string>
     <string name="unknown_service">Unknown service</string>
+    <string name="text_pair">PAIR</string>
+    <string name="device_paired">UNPAIRED</string>
+    
+    <!-- XML-RPC -->
+    <string name="auto_user">HPG3RPCxmLUSEr</string>
+    <string name="auto_pass">0n87umÇwpk4coTURXzn?o^w</string>
 
 </resources>
