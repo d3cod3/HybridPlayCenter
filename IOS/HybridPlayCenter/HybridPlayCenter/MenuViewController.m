@@ -17,6 +17,13 @@
 
 @implementation MenuViewController
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    self.clearsSelectionOnViewWillAppear = NO;
+}
+
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender{
     
     [self getContext];
@@ -41,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,23 +61,21 @@
             CellIdentifier = @"Games";
             break;
         case 1:
-            CellIdentifier = @"Bluetooth";
-            break;
-        case 2:
-            CellIdentifier = @"Calibration";
-            break;
-        case 3:
             CellIdentifier = @"Instructions";
             break;
-        case 4:
+        case 2:
             CellIdentifier = @"Credits";
             break;
-        case 5:
+        case 3:
             CellIdentifier = @"Exit";
             break;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+    
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor redColor];
+    [cell setSelectedBackgroundView:bgColorView];
     
     return cell;
 }

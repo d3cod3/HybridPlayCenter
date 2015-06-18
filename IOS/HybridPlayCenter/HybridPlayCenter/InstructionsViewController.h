@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InstructionsViewController : UIViewController {
+#import "InstructionSlideViewController.h"
+
+@interface InstructionsViewController : UIViewController <UIPageViewControllerDataSource>{
     
     UIBarButtonItem *revealButtonItem;
     
 }
 
 // -----------------------------------------------------------------------------
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageImages;
 
 
 @end

@@ -16,7 +16,7 @@
     @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
     @property (weak, nonatomic) IBOutlet UITextField *gameTitle;
     @property (weak, nonatomic) IBOutlet UITextField *gameDesc;
-    @property (weak, nonatomic) IBOutlet UITextField *gameStore;
+    @property (assign,nonatomic) IBOutlet UIButton *gameStore;
 
     @property NSUInteger pageIndex;
     @property NSString *titleText;

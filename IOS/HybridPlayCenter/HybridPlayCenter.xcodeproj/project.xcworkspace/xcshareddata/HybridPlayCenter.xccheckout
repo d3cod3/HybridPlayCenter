@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>54F7142C-97D0-4762-AC13-7D45D261A4F2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>HybridPlayCenter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>723F5FB4566652F52177F7BCC91F4B76C74B8273</key>
 		<string>https://github.com/d3cod3/HybridPlayCenter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IOS/HybridPlayCenter/HybridPlayCenter.xcodeproj/project.xcworkspace</string>
+	<string>IOS/HybridPlayCenter/HybridPlayCenter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>723F5FB4566652F52177F7BCC91F4B76C74B8273</key>

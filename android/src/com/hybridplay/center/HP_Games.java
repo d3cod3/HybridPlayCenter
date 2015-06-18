@@ -11,12 +11,12 @@ import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -101,21 +101,6 @@ public class HP_Games extends HP_Drawer implements OnClickListener {
 		
 		loadGamesUI();
 		
-		activateBluetooth();
-		
-	}
-	
-	public void activateBluetooth(){
-		SharedFunctions.setBluetooth(true);
-	}
-	
-	public void askForBluetoothActivation(View view){
-		BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-		if (!mBluetoothAdapter.isEnabled()){
-			Intent intentBtEnabled = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);  
-			int REQUEST_ENABLE_BT = 1;
-			startActivityForResult(intentBtEnabled, REQUEST_ENABLE_BT);
-		}
 	}
 	
 	public void checkInternetConnection(){
@@ -571,7 +556,7 @@ public class HP_Games extends HP_Drawer implements OnClickListener {
             ((TextView) rootView.findViewById(R.id.gameDesc)).setText(args.getString("Game Desc"));
             
             TextView gameStore = (TextView) rootView.findViewById(R.id.gameStore);
-            gameStore.setText(args.getString("Game Store"));
+            gameStore.setText("Play Store");
             gameStore.setOnClickListener(this);
             
             Bitmap temp = SharedFunctions.getBitmapFromSDCard(activity.getApplicationContext(),args.getString("Game Title")+".jpg");
@@ -601,13 +586,24 @@ public class HP_Games extends HP_Drawer implements OnClickListener {
 				
 	            break;
 			case R.id.gameStore:
-				String tMsg = "Opening link in Play Store";
+				String tMsg = "Opening game in Play Store";
 				Toast toast2 = Toast.makeText(activity, (CharSequence) tMsg,Toast.LENGTH_LONG);
 				toast2.getView().setBackgroundColor(getResources().getColor(R.color.hp_green));
 				toast2.show();
+				
+				//openGameLink(args.getString("Game Store"));
 				break;
 			}
 	    }
+		
+		public void openGameLink(String packageName){
+			final String appPackageName = packageName;
+			try {
+			    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+			} catch (android.content.ActivityNotFoundException anfe) {
+			    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+			}
+		}
 	}
 
 }

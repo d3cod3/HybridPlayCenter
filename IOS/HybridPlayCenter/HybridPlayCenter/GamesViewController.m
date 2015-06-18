@@ -9,8 +9,6 @@
 #import "GamesViewController.h"
 #import "SWRevealViewController.h"
 
-#import "BluetoothViewController.h"
-
 #import "RXMLElement.h"
 
 @interface GamesViewController ()
@@ -264,7 +262,7 @@
 
 - (void)createGamesJson:(NSMutableArray*)titles withDesc:(NSMutableArray*)desc withImg:(NSMutableArray*)imgs andStores:(NSMutableArray*)stores{
     
-    // create .json file and sotre it in memory
+    // create .json file and store it in memory
     NSError *err;
     NSMutableDictionary *root = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *jsonArray = [[NSMutableDictionary alloc] init];
@@ -533,10 +531,6 @@
 
 #pragma mark - Navigation
 
-- (void)goToBluetoothController{
-    BluetoothViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BluetoothViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 #pragma mark - Page View Controller Data Source
 

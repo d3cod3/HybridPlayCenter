@@ -1,7 +1,5 @@
 package com.hybridplay.center;
 
-import com.hybridplay.shared.SharedFunctions;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -141,8 +139,8 @@ public class HP_Drawer extends FragmentActivity {
         	this.startActivity(intent);
         	finish();
         	break;
-        case 1: // Bluetooth
-        	intent = new Intent(activity, HP_Bluetooth.class);
+        /*case 1: // Connect (WIFI)
+        	intent = new Intent(activity, HP_Connect.class);
         	this.startActivity(intent);
         	finish();
         	break;
@@ -150,19 +148,18 @@ public class HP_Drawer extends FragmentActivity {
         	intent = new Intent(activity, HP_Calibrator.class);
         	this.startActivity(intent);
         	finish();
-        	break;
-        case 3: // Instructions
+        	break;*/
+        case 1: // Instructions
         	intent = new Intent(activity, HP_Instructions.class);
         	this.startActivity(intent);
         	finish();
         	break;
-        case 4: // Credits
+        case 2: // Credits
         	intent = new Intent(activity, HP_Credits.class);
         	this.startActivity(intent);
         	finish();
         	break;
-        case 5: // Exit
-        	SharedFunctions.setBluetooth(false);
+        case 3: // Exit
         	intent = new Intent(Intent.ACTION_MAIN);
         	intent.addCategory(Intent.CATEGORY_HOME);
     	    startActivity(intent);

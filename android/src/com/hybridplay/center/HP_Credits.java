@@ -9,7 +9,7 @@ public class HP_Credits extends HP_Drawer {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_hp_credits);
 		
-		updateSelectedItem(4);
+		updateSelectedItem(2);
 	}
 
 }

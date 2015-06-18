@@ -5,15 +5,13 @@
     <string name="app_name">HybridPlay Center</string>
     <string-array name="menu_array">
         <item>Games</item>
-        <item>Bluetooth</item>
-        <item>Calibration</item>
         <item>Instructions</item>
         <item>Credits</item>
         <item>Exit</item>
     </string-array>
     <string name="game_name">Game Name</string>
     <string name="game_description">Game Description</string>
-    <string name="game_play_store_link">Game Play Store link</string>
+    <string name="game_play_store_link">Play Store</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="update_games">Check if new HybridPlay games are available</string>

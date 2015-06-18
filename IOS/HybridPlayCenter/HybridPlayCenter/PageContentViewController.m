@@ -21,18 +21,13 @@
     self.titleLabel.text = self.titleText;
     self.gameTitle.text = self.titleText;
     self.gameDesc.text = self.descText;
-    self.gameStore.text = self.storeText;
     
-    [self setMaskTo:self.gameDataView byRoundingCorners:UIRectCornerAllCorners withColor:[UIColor colorWithRed:255.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:0.9f]];
+    //[self setMaskTo:self.gameDataView byRoundingCorners:UIRectCornerAllCorners withColor:[UIColor colorWithRed:255.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:0.9f]];
     
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showHideGameInfo:)];
     tapGR.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:tapGR];
     isGameInfoON = NO;
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openStoreLink:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [self.gameStore.superview addGestureRecognizer:tapGesture];
     
 }
 
@@ -66,17 +61,13 @@
     }
 }
 
-- (void)openStoreLink:(UITapGestureRecognizer*)gesture{
-    CGPoint point = [gesture locationInView:gesture.view];
-    
-    if (gesture.state == UIGestureRecognizerStateEnded){
-        if (CGRectContainsPoint(self.gameStore.frame, point)){
-            //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.storeText]];
-            // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.com/apps/appname"]];
-            // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.com/apps/developername"]];
-            NSLog(@"%@",self.storeText);
-        }
-    }
+- (IBAction)openStoreLink{
+    NSString *startURI = @"itms://itunes.com/apps/";
+    NSString *gameURI = self.storeText;
+    NSString *finalURI = [startURI stringByAppendingString:gameURI];
+    // one APP[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.com/apps/appname"]];
+    // all developer APPs[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.com/apps/developername"]];
+    NSLog(@"Play store link: %@",finalURI);
 }
 
 
